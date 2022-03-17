@@ -1,0 +1,25 @@
+﻿@using SchoolLoginSystem.Models
+@model List<ModelForStudent>
+<table class="table table-bordered">
+    <tr>
+        <th>İsim</th>
+        <th>Öğrenci No</th>
+        <th>Matematik Puanı</th>
+        <th>Fizik Puanı</th>
+        <th>Kimya Puanı</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var x in Model){
+    <tr>
+        <td>@x.Name</td>
+        <td>@x.Id</td>
+        <td>@x.Math_point</td>
+        <td>@x.Physics_point</td>
+        <td>@x.Chemistry_point</td>
+        <td><a href="/Teacher/OgrenciGetir/@x.Id" class="btn btn-success">Güncelle</a></td>
+        <td><a href="/Teacher/Delete?id=@x.Id" class="btn btn-danger">Sil </a></td>
+    </tr>
+    }
+</table>
+<a href="/Teacher/OgrenciEkle" class="btn btn-primary">Ekle</a>

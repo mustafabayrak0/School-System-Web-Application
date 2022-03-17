@@ -1,0 +1,22 @@
+﻿@using SchoolLoginSystem.Models
+@model ModelForStudent
+<table class="table table-bordered">
+    <tr>
+        <th>İsim</th>
+        <th>Öğrenci No</th>
+        <th>Kullanıcı Adı</th>
+        <th>Email</th>
+        <th>Matematik Puanı</th>
+        <th>Fizik Puanı</th>
+        <th>Kimya Puanı</th>
+    </tr>
+    <tr>
+        <td>@Model.Name</td>
+        <td>@Model.Id</td>
+        <td>@Model.Username</td>
+        <td>@Model.Email</td>
+        <td>@Model.Math_point</td>
+        <td>@Model.Physics_point</td>
+        <td>@Model.Chemistry_point</td>
+    </tr>
+</table>

@@ -1,0 +1,30 @@
+﻿@model SchoolLoginSystem.Models.ModelForStudent
+@{
+    ViewData["Title"] = "Teacher";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Update", "Teacher", FormMethod.Post))
+{
+    <b>Ogrenci No</b>
+    @Html.TextBoxFor(x=>x.Id,new{ @class="form-control" })
+    <br />
+    <b>İsim</b>
+    @Html.TextBoxFor(x=>x.Name,new{ @class="form-control"})
+    <br />
+    <b>Kullanıcı Adı</b>
+    @Html.TextBoxFor(x=>x.Username,new{@class="form-control"})
+    <br />
+    <b>Şifre</b>
+    @Html.TextBoxFor(x=>x.Password,new{@class="form-control"})
+    <br />
+    <b>Matematik puanı</b>
+    @Html.TextBoxFor(x=>x.Math_point,new{@class="form-control"})
+    <br />
+    <b>Fizik Puanı</b>
+    @Html.TextBoxFor(x=>x.Physics_point,new{@class="form-control"})
+    <br />
+    <b>Kimya Puanı</b>
+    @Html.TextBoxFor(x=>x.Chemistry_point,new{@class="form-control"})
+    <br/>
+    <button class="btn btn-default" type="submit" style="background-color:green;color:white;">Güncelle</button>
+}
