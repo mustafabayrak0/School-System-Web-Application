@@ -21,7 +21,7 @@ namespace SchoolLoginSystem.Controllers
                 var useridentity = new ClaimsIdentity(claims, "Login");
                 ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
                 await HttpContext.SignInAsync(principal);
-                return View("~/Views/Teacher/OgrenciSayfasi.cshtml",bilgiler);//burayı düzenleyeceğim
+                return View("~/Views/Teacher/OgrenciSayfasi.cshtml",bilgiler);
             }
             return View();
         }
